@@ -38,13 +38,14 @@ pipeline {
             }
         }
     }
-     post {
-    success {
-        slackSend channel: '#Tp_gradle',
-                  color: 'good',
-                  message: "The pipeline completed successfully."
+                 stage("not") {
+            steps {
+                 notifyEvents message: 'Hello <b>world</b>', token: '3mD8_X1iRhMU2V88vV2lDJmefzwSu1-F'
+
+            }
+        }
     }
-}
+
    
 
 }
