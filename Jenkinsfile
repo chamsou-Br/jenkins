@@ -15,7 +15,7 @@ pipeline {
                         'value': 'Firefox'
                     ]
                 ]
-                                archiveArtifacts 'build/reports/cucumber/'
+                                archiveArtifacts 'build/reports/cucumber/cucumber-html-reports/*.html'
                 junit 'build/test-results/test/TEST-Matrix.xml'
             }
          }
