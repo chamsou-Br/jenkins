@@ -8,6 +8,7 @@ pipeline {
                 cucumber reportTitle: 'Cucumber report',
                 fileIncludePattern: '**/*.json',
                 trendsLimit: 10,
+                jsonReportDirectory : "build/reports" ,
                 classifications: [
                     [
                        'key': 'Browser',
