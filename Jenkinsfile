@@ -52,12 +52,14 @@ pipeline {
 
             }
         }
-        stage('Email Notification'){
-                        steps {
-                 mail bcc: '', body: '''Build successful!!!!
-Thanks chamsou''', cc: '', from: '', replyTo: '', subject: 'Build successfull', to: 'jc_berkane@esi.dz'
 
-            }
+        post {
+
+        failure {
+            mail bcc: '', body: '''Build Failed!!!!
+Soory chamsou''', cc: '', from: '', replyTo: '', subject: 'Build Faild', to: 'jc_berkane@esi.dz'
+        }
+
 }
     }
 
