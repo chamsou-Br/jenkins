@@ -7,9 +7,8 @@ pipeline {
                 bat 'gradle test'
                 archiveArtifacts 'build/test-results/'
                 cucumber reportTitle: 'Cucumber report',
-                fileIncludePattern: '**/*.json',
+                fileIncludePattern: 'target/report.json',
                 trendsLimit: 10,
-                jsonReportDirectory : "build/reports/" ,
                 classifications: [
                     [
                        'key': 'Browser',
