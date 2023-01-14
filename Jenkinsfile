@@ -7,8 +7,11 @@ pipeline {
             steps {
                 bat 'gradle test'
                archiveArtifacts 'build/libs/*.jar'
+                 junit 'build/reports/*.xml'
             }
          }
+
+
 
 
     }
