@@ -13,7 +13,7 @@ pipeline {
         
           stage ('Code Analysis') { // la phase build
             steps {
-                                withSonarQubeEnv('jenkins'){
+                                withSonarQubeEnv('sonar'){
                 bat 'gradle sonarqube'
                                 }
             }
