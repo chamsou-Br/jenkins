@@ -38,12 +38,7 @@ pipeline {
             }
         }
     }
-                 stage("not") {
-            steps {
-                 notifyEvents message: 'Hello <b>world</b>', token: '3mD8_X1iRhMU2V88vV2lDJmefzwSu1-F'
 
-            }
-        }
     }
 
    
