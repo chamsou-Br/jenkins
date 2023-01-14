@@ -37,9 +37,9 @@ pipeline {
 
             }
         }
-                         stage("not") {
+                         stage("notification") {
             steps {
-                 notifyEvents message: 'Hello <b>world</b>', token: '3mD8_X1iRhMU2V88vV2lDJmefzwSu1-F'
+                 notifyEvents message: 'Pipeline <b> is sucessufuly termined</b>', token: '3mD8_X1iRhMU2V88vV2lDJmefzwSu1-F'
 
             }
         }
