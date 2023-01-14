@@ -57,8 +57,8 @@ pipeline {
             post {
 
         failure {
-            mail bcc: '', body: '''Build Failed!!!!
-Soory chamsou''', cc: '', from: '', replyTo: '', subject: 'Build Faild', to: 'jc_berkane@esi.dz'
+            mail bcc: '', body: '''process Failed!!!!
+Soory chamsou''', cc: '', from: '', replyTo: '', subject: 'process Faild', to: 'jc_berkane@esi.dz'
         }
 
 }
