@@ -8,9 +8,9 @@ pipeline {
                 bat 'gradle test'
                 archiveArtifacts 'build/libs/*.jar'
                 junit 'build/test-results/test/TEST-Matrix.xml'
-                cucumber buildStatus "UNSTABLE",
-                         reportTitle :  "Cucumber",
-                         fileIncludePattern : "target/report.json",
+                cucumber buildStatus "UNSTABLE"
+                         reportTitle :  "Cucumber"
+                         fileIncludePattern : "target/report.json"
             }
          }
         
