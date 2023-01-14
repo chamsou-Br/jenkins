@@ -6,7 +6,6 @@ pipeline {
                 bat 'gradle test'
                 archiveArtifacts 'build/test-results/'
             }
-            
          }
         
         
