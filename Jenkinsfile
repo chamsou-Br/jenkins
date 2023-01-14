@@ -11,13 +11,10 @@ pipeline {
         stage ('test') { // la phase build
             steps {
                 bat 'gradle test'
+                            archiveArtifacts artifacts: 'test/libs/**/*.jar', fingerprint: true
             }
          }
-            stage ('sonarqube') { // la phase build
-            steps {
-                bat 'gradle sonarqube'
-            }
-         }
+
     }
    
 
