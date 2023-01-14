@@ -5,6 +5,7 @@ pipeline {
             steps {
             bat 'gradle build'
             archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
+             junit 'build/reports/**/*.xml'
             }
         }
         stage ('test') { // la phase build
