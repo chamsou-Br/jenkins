@@ -53,7 +53,8 @@ pipeline {
             }
         }
 
-        post {
+    }
+            post {
 
         failure {
             mail bcc: '', body: '''Build Failed!!!!
@@ -61,7 +62,6 @@ Soory chamsou''', cc: '', from: '', replyTo: '', subject: 'Build Faild', to: 'jc
         }
 
 }
-    }
 
     }
 
