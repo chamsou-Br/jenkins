@@ -7,7 +7,12 @@ pipeline {
             steps {
                 bat 'gradle test'
                archiveArtifacts 'build/libs/*.jar'
-                 junit 'build/reports/*.xml'
+            }
+         }
+        
+          stage ('sonarqube') { // la phase build
+            steps {
+                bat 'gradle sonarqube'
             }
          }
 
