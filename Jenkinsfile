@@ -1,12 +1,15 @@
-ppipeline {
-   // This pipeline requires the following plugins:
-   // * Git: https://plugins.jenkins.io/git/
-   // * Workflow Aggregator: https://plugins.jenkins.io/workflow-aggregator/
-   // * JUnit: https://plugins.jenkins.io/junit/
-   agent 'any'
-   stages {
-
-
-   }
-
- }
+pipeline {
+    agent any
+    stages {
+        stage('Test') {
+            steps {
+                sh './gradlew check'
+            }
+        }
+    }
+    post {
+        always {
+            junit 'build/reports/**/*.xml'
+        }
+    }
+}
