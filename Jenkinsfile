@@ -11,8 +11,8 @@ pipeline {
                 trendsLimit: 10,
                 classifications: [
                     [
-                        'key': 'Browser',
-                        'value': 'Firefox'
+                        [key: 'Commit', value: '<a href="${GERRIT_CHANGE_URL}">${GERRIT_PATCHSET_REVISION}</a>'],
+                        [key: 'Submitter', value: '${GERRIT_PATCHSET_UPLOADER_NAME}']
                     ]
                 ]
                 junit 'build/test-results/test/TEST-Matrix.xml'
