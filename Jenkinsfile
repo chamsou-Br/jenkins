@@ -1,11 +1,12 @@
 pipeline {
     agent any
     stages {
-        stage('Test') {
+       
+        stage ('test') { // la phase build
             steps {
-                sh './gradlew test'
+                bat 'gradle test'
             }
-        }
+}
     }
 
 }
