@@ -15,6 +15,7 @@ pipeline {
                         'value': 'Firefox'
                     ]
                 ]
+                junit 'build/test-results/test/TEST-Matrix.xml'
             }
          }
         
