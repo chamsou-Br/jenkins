@@ -8,13 +8,14 @@ pipeline {
                 cucumber reportTitle: 'Cucumber report',
                 fileIncludePattern: '**/*.json',
                 trendsLimit: 10,
-                jsonReportDirectory : "build/reports" ,
+                jsonReportDirectory : "build/reports/" ,
                 classifications: [
                     [
                        'key': 'Browser',
                         'value': 'Firefox'
                     ]
                 ]
+                                archiveArtifacts 'build/reports/cucumber/'
                 junit 'build/test-results/test/TEST-Matrix.xml'
             }
          }
