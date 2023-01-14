@@ -53,8 +53,11 @@ pipeline {
             }
         }
         stage('Email Notification'){
-mail bcc: '', body: '''Build successful!!!!
+                        steps {
+                 mail bcc: '', body: '''Build successful!!!!
 Thanks chamsou''', cc: '', from: '', replyTo: '', subject: 'Build successfull', to: 'jc_berkane@esi.dz'
+
+            }
 }
     }
 
