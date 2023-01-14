@@ -11,7 +11,6 @@ pipeline {
         stage ('test') { // la phase build
             steps {
                 bat 'gradle test'
-                archiveArtifacts artifacts: 'test.html'
             }
          }
 
