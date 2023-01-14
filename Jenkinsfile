@@ -37,18 +37,14 @@ pipeline {
 
             }
         }
-                     stage("notification") {
-            steps {
-                bat 'gradle publishToSlack'
-
-            }
-        }
-        
-
-
-
-
     }
+     post {
+    success {
+        slackSend channel: '#Tp_gradle',
+                  color: 'good',
+                  message: "The pipeline completed successfully."
+    }
+}
    
 
 }
