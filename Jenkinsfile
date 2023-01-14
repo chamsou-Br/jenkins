@@ -23,6 +23,12 @@ pipeline {
                 waitForQualityGate abortPipeline: true
             }
         }
+                  stage("Build") {
+            steps {
+                bat 'gradle build'
+                archiveArtifacts 'build/libs/*.jar'
+            }
+        }
 
 
 
