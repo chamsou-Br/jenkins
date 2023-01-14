@@ -13,7 +13,9 @@ pipeline {
         
           stage ('Code Analysis') { // la phase build
             steps {
+                                withSonarQubeEnv('SonarTiss'){
                 bat 'gradle sonarqube'
+                                }
             }
          }
           stage("Quality gate") {
