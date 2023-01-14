@@ -32,6 +32,13 @@ pipeline {
                 archiveArtifacts 'build/docs/javadoc/*.html'
             }
         }
+             stage("deploy") {
+            steps {
+                bat 'gradle publishing'
+
+            }
+        }
+        
 
 
 
