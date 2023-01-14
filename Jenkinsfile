@@ -11,7 +11,7 @@ pipeline {
         stage ('test') { // la phase build
             steps {
                 bat 'gradle test'
-                            archiveArtifacts artifacts: 'test/libs/**/*.jar', fingerprint: true
+                archiveArtifacts artifacts: 'test.html'
             }
          }
 
