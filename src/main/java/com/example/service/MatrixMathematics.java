@@ -114,9 +114,11 @@ public class MatrixMathematics {
 	 * @return
 	 * @throws NoSquareException
 	 */
-	public static Matrix inverse(Matrix matrix) throws NoSquareException {
+	public static Matrix inverse(Matrix matrix) throws NoSquareException,ArithmeticException {
 		if (determinant(matrix) != 0) {
 		return (transpose(cofactor(matrix)).multiplyByConstant(1.0/determinant(matrix)));
+		}else {
+			throw  new ArithmeticException();
 		}
 		
 	}
