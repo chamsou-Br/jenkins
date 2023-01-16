@@ -3,13 +3,7 @@ pipeline {
 
     agent any
     stages {
-        
-        
-        
-        
-        
-        
-        stage ('test') { // la phase build
+        stage ('test') { // la phase build is
             steps {
                 bat 'gradle test'
                 archiveArtifacts 'build/test-results/'
@@ -26,7 +20,7 @@ pipeline {
             }
          }
         
-            
+        
         
           stage ('Code Analysis') { // la phase build
             steps {
