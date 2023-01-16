@@ -10,8 +10,6 @@ public class Matrix {
 	}
 
 
-	
-
 	public double[][] getData() {
 		return data;
 	}
